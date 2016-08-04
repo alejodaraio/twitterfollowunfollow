@@ -6,10 +6,19 @@ For example to follow you must go to https://twitter.com/UserToFollow/followers 
 
 #follow
 ```javascript
-$('.not-following .user-actions-follow-button').click();
+$('.user-actions.not-following').each(function () {
+    var followButton = $(this).find('.user-actions-follow-button');
+        followButton.click();
+});
 ```
 
 #Unfollow
 ```javascript
-$('.ProfileCard-content').each(function(){var status = $(this).find('.FollowStatus').text();var unfollowButton = $(this).find('.user-actions-follow-button');if(status != 'follows you'){unfollowButton.click();}});
+$('.ProfileCard-content').each(function () {
+    var status = $(this).find('.FollowStatus').text();
+    var unfollowButton = $(this).find('.user-actions-follow-button');
+    if (status != 'follows you') {
+        unfollowButton.click();
+    }
+});
 ```
