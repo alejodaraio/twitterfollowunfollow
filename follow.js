@@ -1,4 +1,4 @@
-$('.user-actions.not-following').each(function () {
-    var followButton = $(this).find('.user-actions-follow-button');
-        followButton.click();
-});
+a = setInterval(function () {
+  window.scrollTo(0,document.body.scrollHeight);
+  $('.not-following .user-actions-follow-button.js-follow-btn').click();
+}, 1000);
