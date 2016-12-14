@@ -18,7 +18,7 @@
 To follow a lot of people listed on a page from someone's followers (https://twitter.com/treyssatvincent/followers) and someone's followings (https://twitter.com/treyssatvincent/following) to list members (https://twitter.com/Crowdfire/lists/cfchatters/members)  
 
 ```javascript
-a=setInterval(function(){window.scrollTo(0,document.body.scrollHeight);$('.not-following .user-actions-follow-button.js-follow-btn').click()},1000);
+setInterval(function(){window.scrollTo(0,document.body.scrollHeight);$('.not-following .user-actions-follow-button.js-follow-btn').click()},1000);
 ```
 (source : https://blog.markgrowth.com/how-i-grew-from-300-to-5k-followers-in-just-3-weeks-2436528da845#.suq8tqyhr)  
 Useful to copy followings and mass followback (just use it on https://twitter.com/followers)  
