@@ -20,8 +20,8 @@ To follow a lot of people listed on a page from someone's followers (https://twi
 ```javascript
 a=setInterval(function(){window.scrollTo(0,document.body.scrollHeight);$('.not-following .user-actions-follow-button.js-follow-btn').click()},1000);
 ```
-
-Useful to copy followings and mass followback (just use it on https://twitter.com/followers)
+(source : https://blog.markgrowth.com/how-i-grew-from-300-to-5k-followers-in-just-3-weeks-2436528da845#.suq8tqyhr)  
+Useful to copy followings and mass followback (just use it on https://twitter.com/followers)  
 
 # Unfollow
 To unfollow everyone, just go on https://twitter.com/following and run :  
@@ -29,3 +29,11 @@ To unfollow everyone, just go on https://twitter.com/following and run :
 ```javascript
 setInterval(function(){t=$(".following").find(".follow-button");if(!t[0]){window.scrollTo(0,$(document).height());}else{ console.log(t.attr("class")); t.trigger("click");}},100)
 ```
+# Like
+To like each Tweets on a page just run this :
+(https://twitter.com/treyssatvincent/following) to list members (https://twitter.com/Crowdfire/lists/cfchatters/members)  
+
+```javascript
+setInterval(function(){window.scrollTo(0,document.body.scrollHeight);$('.ProfileTweet-actionButton.js-actionButton.js-actionFavorite:visible').click()},1000)
+```
+(source : https://blog.markgrowth.com/how-i-grew-from-300-to-5k-followers-in-just-3-weeks-2436528da845#.suq8tqyhr)
