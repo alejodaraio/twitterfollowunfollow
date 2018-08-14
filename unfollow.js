@@ -1,7 +1,9 @@
-$('.ProfileCard-content').each(function () {
-    var status = $(this).find('.FollowStatus').text();
-    var unfollowButton = $(this).find('.user-actions-follow-button');
-    if (status != 'follows you') {
-        unfollowButton.click();
+setInterval(function() {
+    t = $(".following").find(".follow-button");
+    if (!t[0]) {
+        window.scrollTo(0, $(document).height());
+    } else {
+        console.log(t.attr("class"));
+        t.trigger("click");
     }
-});
+}, 100)
